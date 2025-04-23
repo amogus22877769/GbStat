@@ -1,5 +1,6 @@
 import asyncio
 from webscraper import WebScraper
+from os import remove
 
 
 # async def get_channel_info(username: str, link: str | None = None, messages: list[int] | None = None):
@@ -33,7 +34,9 @@ async def main():
     web_scraper: WebScraper = WebScraper()
     await web_scraper.start_session()
     await web_scraper.get_channel_history('amogus22877769')
+    await web_scraper.start_updating_loop(['amogus22877769'], 60*60)
     await web_scraper.close_session()
 
 if __name__ == '__main__':
+    # remove('database.db')
     asyncio.run(main())

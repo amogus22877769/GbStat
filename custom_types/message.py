@@ -1,12 +1,15 @@
 from typing import TypedDict
 
 
-class Message(TypedDict):
+class MessageType(TypedDict):
     id: int
     caption: str
     views: int
     datetime: str
+    photo_urls: list[str]
+    video_urls: list[str]
+    sticker_url: str
 
 
 if __name__ == '__main__':
-    a: Message['id'] = 'asdasdasd'
+    a: MessageType['id'] = 'asdasdasd'
