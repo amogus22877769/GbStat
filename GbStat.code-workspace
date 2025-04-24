@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "GbStat",
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.REPL.enableREPLSmartSend": false
+	}
+}
